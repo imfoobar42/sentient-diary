@@ -23,8 +23,6 @@ Entry IDs are auto-incremented per user starting from entry_1
 
 Logging format strictly adheres to specification for ease of testing
 
-Mock implementations replace paid API calls to enable offline development
-
 ---
 
 ## Core Pipeline Workflow
