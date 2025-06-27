@@ -1,0 +1,37 @@
+{
+  "name": "backend-pipeline",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "simulate:first": "tsx src/simulate/first.ts",
+    "simulate:hundred": "tsx src/simulate/hundred.ts",
+    "start:server": "tsx src/server.ts",
+    "build": "tsc",
+    "start": "node dist/pipeline.js",
+    "lint": "next lint",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^24.0.4",
+    "@typescript-eslint/eslint-plugin": "^8.35.0",
+    "@typescript-eslint/parser": "^8.35.0",
+    "eslint": "^9.29.0",
+    "jest": "^30.0.2",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "@huggingface/inference": "^4.0.6",
+    "axios": "^1.10.0",
+    "dotenv": "^16.5.0",
+    "express": "^5.1.0",
+    "openai": "^5.7.0"
+  }
+}

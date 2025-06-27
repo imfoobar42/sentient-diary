@@ -1,0 +1,5 @@
+
+> backend-pipeline@1.0.0 start:server
+> tsx src/server.ts
+
+🚀 Server running at http://localhost:3001

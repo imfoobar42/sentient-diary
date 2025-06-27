@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Simulate UI</title>
+</head>
+<body>
+  <h2>Diary Entry Simulator</h2>
+  <textarea id="entry" rows="4" cols="50" placeholder="Enter your thoughts..."></textarea><br />
+  <button onclick="simulate()">Submit</button>
+
+  <h3>AI Response:</h3>
+  <pre id="response">...</pre>
+
+  <script>
+    async function simulate() {
+      const input = document.getElementById('entry').value;
+
+      const res = await fetch('http://localhost:3001/simulate', {
+        method: 'POST',
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({ input })
+      });
+
+      const data = await res.json();
+      document.getElementById('response').textContent = data.response || 'Error.';
+    }
+  </script>
+</body>
+</html>
