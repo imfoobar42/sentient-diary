@@ -9,9 +9,10 @@ This is my personal implementation of a **13-step modular AI pipeline** designed
 
 The project emphasizes clean modular design, strict logging as per specifications, and mocking external APIs to ensure zero operational cost and ease of local development.
 
-##
+---
 
-Design Assumptions
+## Design Assumptions
+
 Embeddings fixed at 384 dimensions (MiniLM standard)
 
 Empathetic reply length capped at ~55 characters
@@ -87,20 +88,5 @@ interface ParsedEntry {
    npm run simulate:first
    npm run simulate:hundred
 
----
-
-Run simulation for first-ever entry (cold start):
-
-bash
-Copy
-Edit
-
-Run simulation for 100th entry (with prior 99 entries loaded):
-
-bash
-Copy
-Edit
-npm run simulate:hundred
-Each simulation prints 13 detailed log lines showing inputs, outputs, and notes per step.
 
 ````
